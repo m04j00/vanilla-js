@@ -100,10 +100,84 @@ title.innerHTML = "Hi! From Js"
 title.style.color = "red";
 document.title = "I own you now";
 */
-
+/* 2-4
 const title = document.querySelector("#title");
 
 function handleClick() {
     title.style.color = "red";
 }
 title.addEventListener("click", handleClick);
+*/
+
+/* 2-5
+if(10 > 5){
+    console.log("hi");
+} else{
+    console.log("ho");
+}
+
+const age = prompt("How old are you?");
+
+if(age > 18 && age <= 21){
+    console.log("you cna drink but should not");
+} else if(age < 21){
+    console.log("go ahed")
+} else {
+    console.log("too young");
+}
+*/
+/* 2-6
+const title = document.querySelector("#title");
+
+const BASE_COLOR = "rgb(52, 73, 94)";
+const OTHER_COLOR = "#7f8c8d";
+
+function handleClick() {
+    const currentColor = title.style.color;
+    if(currentColor === BASE_COLOR){
+        title.style.color = OTHER_COLOR;
+    } else{
+        title.style.color = BASE_COLOR;
+    }
+}
+
+function init(){
+    title.style.color = BASE_COLOR;
+    title.addEventListener("click", handleClick);
+}
+
+init();
+
+function handhandleOffLine(){
+    console.log("Bye Bye");
+    alert("인터넷 연결 없음");
+}
+
+function handhandleOnLine(){
+    console.log("Welcom back");
+}
+
+window.addEventListener("offline", handhandleOffLine);
+window.addEventListener("online", handhandleOnLine);
+*/
+
+const title = document.querySelector("#title");
+
+const CLICKED_CLASS = "clicked";
+
+function handleClick(){
+    title.classList.toggle(CLICKED_CLASS);
+
+    // const hasClass = title.classList.contains(CLICKED_CLASS);
+
+    // if(hasClass){
+    //     title.classList.remove(CLICKED_CLASS);
+    // } else{
+    //     title.classList.add(CLICKED_CLASS);
+    // }
+}
+function init(){
+    title.addEventListener("click", handleClick);
+}
+
+init();
