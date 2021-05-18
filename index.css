@@ -1,12 +1,11 @@
 body{
-    background-color: skyblue;
+    background-color: rgb(182, 234, 255);
 }
 .btn{
     cursor: pointer;
 }
-h1{
-    color: pink;
-    transition: color 0.5s ease-in-out;
+body{
+    color: rgb(0, 0, 0);
 }
 
 .clicked{
